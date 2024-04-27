@@ -17,11 +17,8 @@ else
 	goose -dir ./migrations create ${name} go
 endif
 
-goose-build:
-	cd ./migrations && go build -o ./goose-migrations *.go
+goose-up:
+	cd ./migrations && go run . -dir ./ "${GOOSE_DBSTRING}&multiStatements=true" up
 
-goose-up: goose-build
-	cd ./migrations && ./goose-migrations -dir ./ "${GOOSE_DBSTRING}&multiStatements=true" up
-
-goose-down: goose-build
-	cd ./migrations && ./goose-migrations -dir ./ "${GOOSE_DBSTRING}&multiStatements=true" down
+goose-down:
+	cd ./migrations && go run . -dir ./ "${GOOSE_DBSTRING}&multiStatements=true" down
