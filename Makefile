@@ -1,4 +1,4 @@
-include .env.example
+include .env
 
 GOOSE_DBSTRING=${DB_USER}:${DB_PASSWORD}@tcp(${DB_HOST}:${DB_PORT})/${DB_NAME}?charset=utf8mb4&parseTime=True&loc=Local
 
