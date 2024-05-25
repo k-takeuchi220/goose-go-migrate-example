@@ -1,0 +1,6 @@
+go 1.22
+
+use (
+	./infrastructure/db
+	./your_project
+)

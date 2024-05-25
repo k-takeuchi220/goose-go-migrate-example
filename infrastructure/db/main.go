@@ -9,6 +9,8 @@ import (
 	"os"
 
 	"github.com/pressly/goose/v3"
+
+	_ "github.com/goose-go-migrate-example/infrastructure/db/migrations"
 )
 
 var (

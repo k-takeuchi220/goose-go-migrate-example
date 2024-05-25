@@ -1,10 +1,10 @@
-package main
+package migrations
 
 import (
 	"context"
 	"database/sql"
 
-	"github.com/goose-go-migrate-example/src/domain"
+	"github.com/goose-go-migrate-example/your_project/domain"
 	"github.com/pressly/goose/v3"
 )
 

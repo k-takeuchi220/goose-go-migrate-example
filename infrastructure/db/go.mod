@@ -1,6 +1,6 @@
-module migrations
+module github.com/goose-go-migrate-example/infrastructure/db
 
-go 1.22.1
+go 1.22
 
 require (
 	github.com/goose-go-migrate-example v0.0.0-00010101000000-000000000000
@@ -19,5 +19,4 @@ require (
 	golang.org/x/sync v0.7.0 // indirect
 	gorm.io/gorm v1.25.7 // indirect
 )
-
-replace github.com/goose-go-migrate-example => ../../goose-go-migrate-example
+replace github.com/goose-go-migrate-example => ../../../goose-go-migrate-example

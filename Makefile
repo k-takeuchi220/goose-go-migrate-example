@@ -14,11 +14,11 @@ ifeq ($(name),)
 	@echo "Usage:"
 	@echo "	$$ make goose-add-migration name=<name>"
 else
-	goose -dir ./migrations create ${name} go
+	goose -dir ./infrastructure/db/migrations create ${name} go
 endif
 
 goose-up:
-	cd ./migrations && go run . -dir ./ "${GOOSE_DBSTRING}&multiStatements=true" up
+	cd ./infrastructure/db && go run main.go -dir ./migrations "${GOOSE_DBSTRING}&multiStatements=true" up
 
 goose-down:
-	cd ./migrations && go run . -dir ./ "${GOOSE_DBSTRING}&multiStatements=true" down
+	cd ./infrastructure/db && go run main.go -dir ./migrations "${GOOSE_DBSTRING}&multiStatements=true" down
