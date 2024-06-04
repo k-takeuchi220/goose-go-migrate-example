@@ -10,6 +10,7 @@ import (
 
 	"github.com/pressly/goose/v3"
 
+	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/goose-go-migrate-example/infrastructure/db/migrations"
 )
 
